@@ -1,0 +1,80 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coeurbox {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5rem solid grey;
+    font-size: 4em;
+    position: relative; 
+}
+
+.coeurbox__heartfull{
+    background: linear-gradient(189deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    opacity: 0;
+}
+
+.coeurbox__heartfull:hover {
+    cursor: pointer;
+    animation: coeur 0.5s ease none;
+    animation-fill-mode: forwards;
+    display: block;
+    z-index: 1;
+    mix-blend-mode: lighten;
+    transition: opacity 3s ease;
+    font-size: 1.05em;
+}
+
+.coeurbox__heart{
+    position: absolute;
+    opacity: 0.4;
+}
+.coeurbox__heart:hover{
+    display: none;
+    z-index: 1;
+    opacity: 0;
+}
+
+
+
+
+@keyframes coeur {
+    0% {
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.3;
+    }
+    35%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    65%{
+        opacity: 0.75;
+    }
+    85%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
