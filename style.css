@@ -5,12 +5,15 @@
 }
 
 body {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction:column;
+    
 }
 
+
+/************************Coeur***********************************/
 .coeurbox {
     width: 20rem;
     height: 20rem;
@@ -20,6 +23,7 @@ body {
     border: 0.5rem solid grey;
     font-size: 4em;
     position: relative; 
+    margin-bottom: 10rem;
 }
 
 .coeurbox__heartfull{
@@ -51,9 +55,6 @@ body {
     opacity: 0;
 }
 
-
-
-
 @keyframes coeur {
     0% {
         opacity: 0;
@@ -75,6 +76,109 @@ body {
     }
     100%{
         opacity: 1;
+        /* text-shadow: 0 0 2rem rgb(214, 131, 186,0.5); */
     }
     
 }
+
+/************************animboxcheck***********************************/
+.animbox{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.5rem solid grey;
+    height: 30rem;
+    width: 30rem;
+
+}
+
+.list__menu{
+    background-color: white;
+    background: #e4dede;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    width: 80%;
+    box-shadow: 2px 5px 0.9rem -2px #0000001f;
+    display: flex;
+    max-height: 6rem;
+}
+
+.menu{
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.list__menu__title ,h3{
+    font-size: 1.2em;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.2rem;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+    
+
+.list__menu__subtitle, p{
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.list__menu__price{
+    font-weight: bold;
+    padding-right: 0.3rem;
+}
+
+.list__menu__anim{
+    opacity: 1;
+    background: #99E2D0;
+    border-radius: 0 1rem 1rem 0;
+    height: 100%;
+    overflow: hidden;
+    width: 0;
+    transition-duration: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.list__menu:hover .list__menu__anim{
+    width: 100px;
+
+}
+
+.list__menu__anim__circle{
+    font-size: 1.9rem;
+    color: white;
+    height: 2rem;
+    width:2rem;
+}
+
+.list__menu__anim__circle:hover {
+    transform: rotate(180deg);
+    transition-duration: 1s;
+    animation: rotate 1s both;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+    
+} 
+
