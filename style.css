@@ -144,7 +144,6 @@ body {
     animation-name: opacity, translateY;
     animation-duration: 0.5s, 0.5s;
     animation-timing-function: ease-in-out, ease-in-out;
-    /* animation-delay: 0s, 2s; */
     animation-direction: forward, forward;
 }
 
@@ -181,7 +180,7 @@ body {
 
 
 .menu{
-    flex-grow: 1;
+    flex-grow: 2;
     overflow: hidden;
 }
 
@@ -196,23 +195,25 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
 }
-    
 
-.list__menu__subtitle, p{
+.list__menu__subtitle {
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
+    padding-left: 0.9rem;
+}
+
+.list__menu__text{
     margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    display: flex;
-    justify-content: space-between;
 }
 
 
-.list__menu__price{
+.list__menu__price {
     font-weight: bold;
-    padding-right: 0.3rem;
+    padding-right: 0.5rem;
 }
 
 .list__menu__anim{
@@ -261,17 +262,17 @@ body {
 @keyframes opacity {
     0% {
         opacity:0;
-      }
-      100% {
+    }
+    100% {
         opacity:1;
-      }
+    }
 }
 
 @keyframes translateY {
     0% {
         transform: translateY(0)
-      }
-      100% {
+    }
+    100% {
         transform: translateY(-10px)
-      }
+    }
 }
