@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -9,8 +11,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction:column;
-    
 }
+
 
 /************************Loader***********************************/
 .anim11 {
@@ -28,7 +30,6 @@ body {
     align-items: center;
     animation: Loader 0.01s both;
     animation-delay: 1.75s;
-    /* animation-fill-mode: both; */
 }
 
 @keyframes Loader{
@@ -128,7 +129,7 @@ body {
     align-items: center;
     justify-content: center;
     border: 0.5rem solid grey;
-    height: 60rem;
+    height: 30rem;
     width: 30rem;
 
 }
@@ -137,45 +138,45 @@ body {
     background: #e4dede;
     margin-top: 1rem;
     border-radius: 1rem;
-    width: 80%;
+    width: 60%;
     box-shadow: 2px 5px 0.9rem -2px #0000001f;
     display: flex;
     max-height: 6rem;
     animation-name: opacity, translateY;
-    animation-duration: 0.5s, 0.5s;
+    animation-duration: 2s, 0.5s;
     animation-timing-function: ease-in-out, ease-in-out;
-    animation-direction: forward, forward;
+    animation-direction: normal, normal;
 }
 
 .list__menu:nth-child(1){
-    animation-delay: 0.3s,1s;
+    animation-delay: 0s,1s;
 }
 .list__menu:nth-child(2){
     animation-delay: 0.2s,1.2s;
 }
 .list__menu:nth-child(2){
-    animation-delay: 0.1s,1.3s;
+    animation-delay: 0.4s,1.3s;
 }
 .list__menu:nth-child(3){
-    animation-delay: 0.3s,1.4s;
+    animation-delay: 0.6s,1.4s;
 }
 .list__menu:nth-child(4){
-    animation-delay: 0.4s,1.5s;
+    animation-delay: 0.8s,1.5s;
 }
 .list__menu:nth-child(5){
-    animation-delay: 0.5s,1.6s;
+    animation-delay: 0.9s,1.6s;
 }
 .list__menu:nth-child(6){
-    animation-delay: 0.6s,1.7s;
+    animation-delay: 1s,1.7s;
 }
 .list__menu:nth-child(7){
-    animation-delay: 0.7s,1.8s;
+    animation-delay: 1.2s,1.8s;
 }
 .list__menu:nth-child(8){
-    animation-delay: 0.8s,1.9s;
+    animation-delay: 1.4s,1.9s;
 }
 .list__menu:nth-child(9){
-    animation-delay: 0.9s,2s;
+    animation-delay: 1.6s,2s;
 }
 
 
@@ -194,6 +195,8 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-weight: bolder;
+    color: #9356DC;
 }
 
 .list__menu__subtitle {
@@ -201,6 +204,7 @@ body {
     justify-content: space-between;
     padding-bottom: 0.5rem;
     padding-left: 0.9rem;
+    font-style: italic;
 }
 
 .list__menu__text{
@@ -230,9 +234,8 @@ body {
 
 }
 
-.list__menu:hover .list__menu__anim{
+.list__menu:hover .list__menu__anim {
     width: 100px;
-
 }
 
 .list__menu__anim__circle{
@@ -242,22 +245,11 @@ body {
     width:2rem;
 }
 
-.list__menu__anim__circle:hover {
-    transform: rotate(180deg);
+.list__menu:hover .list__menu__anim__circle {
+    transform: rotate(-360deg);
     transition-duration: 1s;
-    animation: rotate 1s both;
 }
 
-
-@keyframes rotate {
-    0% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-    
-} 
 
 @keyframes opacity {
     0% {
@@ -274,5 +266,50 @@ body {
     }
     100% {
         transform: translateY(-10px)
+    }
+}
+
+/************************Text typing*******************/
+
+
+.textTyping {
+    width: 90%;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5rem solid grey; 
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+    font-family: "Josefin Sans", sans-serif;
+    overflow: hidden;
+    font-size: 3rem;
+}
+
+#target {
+    display: flex;
+    margin-left: 1rem;
+    position: relative;
+}
+
+#target::after {
+    content: "";
+    position: absolute;
+    height: 3rem;
+    width: 5px;
+    background: black;
+    top: 1rem;
+    transform: translateY(-4px);
+    right: -1px;
+    
+    animation: anim 0.8s linear infinite;
+}
+
+@keyframes anim {
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
     }
 }
